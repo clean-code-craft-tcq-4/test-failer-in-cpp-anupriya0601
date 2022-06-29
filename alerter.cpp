@@ -1,6 +1,6 @@
 #include <iostream>
 #include <assert.h>
-#include <alerter_stub.h>
+#include "alerter_stub.h"
 
 int alertFailureCount = 0;
 
