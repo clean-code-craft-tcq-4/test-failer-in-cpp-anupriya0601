@@ -1,5 +1,6 @@
 #include <iostream>
 #include <assert.h>
+#include <string.h>
 
 std::string findMajorColor(int x) {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
@@ -24,8 +25,7 @@ int printColorMap() {
 int main() {
     int result = printColorMap();
     assert(result == 25);
-    int i = 2, j = 1;
-    assert( i*5+j +"|"+ findMajorColor(2) + "|" + findMinorColor(1) == "11 | Black | Orange");
+    assert(strcmp("Black|Orange",(findMajorColor(2) + "|" + findMinorColor(2)).c_str())==0);
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
